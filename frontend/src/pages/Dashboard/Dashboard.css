@@ -1,0 +1,99 @@
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.quick-actions-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  color: var(--text-main);
+  font-family: var(--font-accent);
+  margin-bottom: 0.25rem;
+  position: relative;
+  display: inline-block;
+}
+
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.action-tile {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  cursor: pointer;
+  padding: 1.5rem;
+  background-color: var(--bg-card);
+  transition: all var(--transition-normal);
+}
+
+.action-tile:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-lg), var(--shadow-premium);
+}
+
+.tile-emoji {
+  font-size: 2rem;
+  background-color: #f1f5f9;
+  width: 55px;
+  height: 55px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-fast);
+}
+
+.action-tile:hover .tile-emoji {
+  background-color: var(--primary-light);
+}
+
+.tile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.tile-details h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.tile-details p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Clickable and disabled cards styling */
+.card-wrapper.clickable {
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.card-wrapper.clickable:hover {
+  transform: translateY(-5px);
+}
+
+.card-wrapper.disabled {
+  cursor: not-allowed;
+}
+

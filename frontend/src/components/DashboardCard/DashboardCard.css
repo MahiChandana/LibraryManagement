@@ -1,0 +1,91 @@
+.dashboard-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.75rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  overflow: hidden;
+  position: relative;
+  transition: all var(--transition-normal);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.card-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-main);
+  font-family: var(--font-accent);
+  line-height: 1.1;
+}
+
+.card-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-md);
+  font-size: 1.5rem;
+  transition: all var(--transition-normal);
+}
+
+/* Themes colors */
+.theme-primary .card-icon-container {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+.theme-primary:hover {
+  border-color: var(--primary);
+}
+
+.theme-success .card-icon-container {
+  background-color: var(--success-light);
+  color: var(--success);
+}
+.theme-success:hover {
+  border-color: var(--success);
+}
+
+.theme-warning .card-icon-container {
+  background-color: var(--warning-light);
+  color: var(--warning);
+}
+.theme-warning:hover {
+  border-color: var(--warning);
+}
+
+.theme-info .card-icon-container {
+  background-color: var(--info-light);
+  color: var(--info);
+}
+.theme-info:hover {
+  border-color: var(--info);
+}
+
+.theme-danger .card-icon-container {
+  background-color: var(--danger-light);
+  color: var(--danger);
+}
+.theme-danger:hover {
+  border-color: var(--danger);
+}
+
+/* Micro-interaction on card hover */
+.dashboard-card:hover .card-icon-container {
+  transform: scale(1.1) rotate(5deg);
+}

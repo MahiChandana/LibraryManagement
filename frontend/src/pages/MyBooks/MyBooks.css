@@ -1,0 +1,41 @@
+.my-books-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.days-info-span {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.returned-text {
+  color: var(--success);
+}
+
+.overdue-text {
+  color: var(--danger);
+  animation: pulse-danger 2s infinite;
+}
+
+.due-today-text {
+  color: var(--warning-text);
+  font-weight: 700;
+}
+
+.remaining-text {
+  color: var(--primary);
+}
+
+@keyframes pulse-danger {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}

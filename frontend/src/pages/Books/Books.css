@@ -1,0 +1,234 @@
+.books-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.filters-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1.25rem 1.5rem;
+}
+
+.search-form {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 300px;
+}
+
+.filter-input {
+  flex: 1;
+}
+
+.category-filter {
+  min-width: 200px;
+}
+
+.filter-select {
+  cursor: pointer;
+}
+
+.book-title-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.book-bold-title {
+  font-weight: 600;
+  color: var(--text-main);
+  font-family: var(--font-accent);
+}
+
+.book-desc-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  gap: 1rem;
+}
+
+.empty-state-icon {
+  font-size: 3.5rem;
+}
+
+.empty-state h3 {
+  font-size: 1.5rem;
+  color: var(--text-main);
+}
+
+.empty-state p {
+  color: var(--text-muted);
+  max-width: 450px;
+  margin-bottom: 0.5rem;
+}
+
+.delete-modal-text {
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
+}
+
+.delete-modal-warning {
+  color: var(--danger-text);
+  background-color: var(--danger-light);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 550;
+  border-left: 3.5px solid var(--danger);
+}
+
+@media (max-width: 768px) {
+  .filters-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-form {
+    min-width: 100%;
+  }
+}
+
+/* Sorting & view details enhancements */
+.sort-filter {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.sort-order-btn {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.checkbox-filter {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  cursor: pointer;
+  user-select: none;
+}
+
+.book-row.clickable {
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.book-row.clickable:hover {
+  background-color: var(--bg-hover-table);
+}
+
+/* Book Details Modal styles */
+.book-details-view {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: var(--text-main);
+  padding: 0.5rem;
+}
+
+.details-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.details-emoji {
+  font-size: 2.5rem;
+  background-color: var(--primary-light);
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.details-header h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.details-author {
+  color: var(--text-muted);
+  margin: 0.25rem 0 0 0;
+  font-size: 0.95rem;
+}
+
+.details-divider {
+  border: 0;
+  border-top: 1px solid #e2e8f0;
+  margin: 0;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 1.5rem;
+}
+
+.details-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.details-item strong {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.details-item span {
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.details-description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.details-description strong {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.details-description p {
+  font-size: 0.92rem;
+  color: var(--text-main);
+  line-height: 1.5;
+  margin: 0;
+  background-color: #f8fafc;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid #e2e8f0;
+}
+
+.details-actions {
+  margin-top: 0.5rem;
+}
+
